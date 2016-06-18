@@ -30,6 +30,9 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'sprockets', '2.11.0'
 gem 'sass-rails'
 
+# Add simple form gem
+gem 'simple_form'
+
 # Add Devise gem
 gem 'devise', '>= 3.2.4'
 
