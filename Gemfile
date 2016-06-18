@@ -36,6 +36,15 @@ gem 'simple_form'
 # Add Devise gem
 gem 'devise', '>= 3.2.4'
 
+# Add Carrierwave
+gem 'carrierwave'
+
+# Add Figaro
+gem 'figaro', ">= 1.0.0"
+
+# Add Fog
+gem 'fog'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
