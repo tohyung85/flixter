@@ -1,0 +1,25 @@
+$footer-height: 100px;
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* Wrapper for page content to push down footer */
+.site-content {
+  flex: 1;
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  margin-top: 100px;
+  height: $footer-height;
+  background-color: rgba(36,32,33,0.9);
+}
