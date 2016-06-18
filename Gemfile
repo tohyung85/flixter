@@ -45,6 +45,9 @@ gem 'figaro', ">= 1.0.0"
 # Add Fog
 gem 'fog'
 
+# Add minimagick
+gem 'mini_magick', "~> 4.3.1"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
