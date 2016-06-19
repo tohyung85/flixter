@@ -50,6 +50,10 @@ gem 'mini_magick', "~> 4.3.1"
 
 # Add carrierwave-aws
 gem 'carrierwave-aws'
+
+# Add Stripe
+gem 'stripe'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
