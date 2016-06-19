@@ -48,6 +48,8 @@ gem 'fog'
 # Add minimagick
 gem 'mini_magick', "~> 4.3.1"
 
+# Add carrierwave-aws
+gem 'carrierwave-aws'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
