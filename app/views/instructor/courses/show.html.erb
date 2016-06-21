@@ -2,6 +2,7 @@
   
   $(function(){
     $('.lessons').sortable({
+      axis: 'y',
       update: function(event, ui) {
         $.ajax({
           type: 'PUT',
@@ -13,6 +14,7 @@
     });
 
     $('.sections').sortable({
+      axis: 'y',
       update: function(event, ui) {
         $.ajax({
           type: 'PUT',
