@@ -25,6 +25,11 @@
       }
     });
 
+    $('.new-lesson-button').click(function(event){
+      var lessonUrl = $(this).data('lesson-url');
+      $('#newLessonForm').attr('action', lessonUrl);
+    });
+
   });
 
   
@@ -53,7 +58,10 @@
           <span class="glyphicon glyphicon-list"></span>
           <%= section.title %>
         </div>
-        <%= link_to 'New Lesson', new_instructor_section_lesson_path(section), class: 'btn btn-primary pull-right' %>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary new-lesson-button pull-right" data-toggle="modal" data-target="#myLessonModal" data-lesson-url="<%= instructor_section_lessons_path(section) %>">
+          New Lesson
+        </button>
         <br class="clear" />
         <br class="clear" />
         <ul class="lessons">
@@ -80,10 +88,7 @@
     <% end %>
   </ul>
 
-
-
-
-<!-- Modal -->
+<!-- New Section Modal -->
 <div class="modal fade" id="mySectionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -100,6 +105,33 @@
           <%= f.submit "Add a section", class: 'btn btn-primary' %>
         <% end %>
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- New Lesson Modal -->
+<div class="modal fade" id="myLessonModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Add a New Lesson</h4>
+      </div>
+      <div class="modal-body">
+        <%= simple_form_for @lesson, url: '#', html: {id: 'newLessonForm'} do |f| %>
+          <%= f.input :title %>
+          <%= f.input :subtitle %>
+          <%= f.input :video %>
+          <br/>                  
+      </div>
+      <div class="modal-footer">
+        <%= f.submit 'Create Lesson', class: 'btn btn-primary'%>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>        
+        <% end %>
       </div>
     </div>
   </div>
