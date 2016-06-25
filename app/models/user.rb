@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :courses
-  has_many :enrollments
+  has_many :enrollments, dependent: :destroy
   has_many :enrolled_courses, through: :enrollments, source: :course
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
