@@ -17,10 +17,12 @@
   <% @courses.each do |course| %>  
   <% if @courses.find_index(course) < 3 %>
   <div class="col-sm-4 booyah-box">
+    <%= link_to course_path(course) do %>
     <%= image_tag course.image, class: 'img-responsive root-page-image' %>
     <br/>
     <h3><%= course.title %></h3>
     <p><%= course.description %></p>
+    <% end %>
   </div>
   <% end %>
   <% end %>
