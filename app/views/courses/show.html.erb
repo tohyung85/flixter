@@ -18,6 +18,10 @@
   <br/>
   <br/>
 
+  <div class="col-sm-4 col-xs-12">
+    <%= @course.description %>
+  </div>
+
   <% if current_user && current_user.enrolled_in?(@course) %>
     <h3 class="label label-info">You are Enrolled!</h3>
   <% else %>
@@ -43,11 +47,7 @@
     <% end %>
   <% end %>
 
-  
 
-  <div class="col-sm-4 col-xs-12">
-    <%= @course.description %>
-  </div>
 
   <div class="col-xs-12">
     <% @course.sections.rank(:row_order).each do |section| %>
